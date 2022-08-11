@@ -5,6 +5,8 @@ import authRoute from './routes/auth.js';
 import usersRoute from './routes/users.js';
 import hotelRoute from './routes/hotel.js';
 import roomsRoute from './routes/rooms.js';
+import cookieParser from 'cookie-parser';
+
 const app = express();
 dotenv.config();
 const connect = async () => {
@@ -17,6 +19,8 @@ const connect = async () => {
 };
 
 //middlewares
+//use cookieParser to parse cookies from jwt token
+app.use(cookieParser());
 app.use(express.json());
 app.use('/api/auth', authRoute);
 app.use('/api/users', usersRoute);
