@@ -1,5 +1,5 @@
 import express from 'express';
-//use conrollers for crud operations.
+//use controllers for crud operations.
 import {
   createHotel,
   deleteHotel,
