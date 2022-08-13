@@ -7,4 +7,4 @@
 /api/!.yarn/releases
 /api/!.yarn/sdks
 /api/!.yarn/versions
-/api/.env
+
