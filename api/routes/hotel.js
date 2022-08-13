@@ -8,25 +8,21 @@ import {
   updateHotel,
 } from '../controllers/hotel.js';
 
+import { verifyAdmin } from '../utils/verifyToken.js';
 const router = express.Router();
 
-//create
-router.post('/', createHotel);
+//CREATE
+router.post('/', verifyAdmin, createHotel);
 
-//update
-router.put('/:id', updateHotel);
-//delete
-router.delete('/:id', deleteHotel);
+//UPDATE
+router.put('/:id', verifyAdmin, updateHotel);
+//DELETE
+router.delete('/:id', verifyAdmin, deleteHotel);
+//GET
 
-//get
-router.get('/:id', getHotel);
-//getall
-router.get(
-  '/',
-  getHotels
-  // const failed = true;
+router.get('/find/:id', getHotel);
+//GET ALL
 
-  // if (failed) return next(createError(401, 'No Authentication'));
-);
+router.get('/', getHotels);
 
 export default router;
