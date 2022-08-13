@@ -1,1 +1,10 @@
-/node_modules
+/api/node_modules
+/api/.yarn.lock
+/api/.yarn/*
+/api/!.yarn/cache
+/api/!.yarn/patches
+/api/!.yarn/plugins
+/api/!.yarn/releases
+/api/!.yarn/sdks
+/api/!.yarn/versions
+
